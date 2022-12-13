@@ -16,10 +16,10 @@ int main(void)
 	{
 	putchar((digit1 / 10) + '0');
 	putchar((digit1 % 10) + '0');
-	puchar(' ');
+	putchar(' ');
 	putchar((digit2 / 10) + '0');
 	putchar((digit2 % 10) + '0');
-	if (digit1 == 98 && digit == 99)
+	if (digit1 == 98 && digit2 == 99)
 	continue;
 	putchar(',');
 	putchar(' ');
