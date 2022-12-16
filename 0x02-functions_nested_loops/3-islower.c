@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * int_islower(int c) -Check description
- * @c: single letter input
+ * int _islower(int c) -Check description
  * Description: It checks for a lowercase character.
+ * @c: single letter input
  * Return: 1 (c) otherwise nothing.
  */
 
