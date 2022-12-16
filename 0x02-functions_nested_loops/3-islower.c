@@ -8,7 +8,7 @@
  * Return: 1 (c) otherwise nothing.
  */
 
-int_islower(int c)
+int_islower(c)
 {
 	if (c >= 'a' && c <= 'z')
 	return (1);
