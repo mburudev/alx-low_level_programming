@@ -12,17 +12,17 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-	fprintf(stderr, "+");
+	fprintf(stderr, "+","+");
 	return (1);
 	}
 	else if (n == 0)
 	{
-	fprintf(stderr, "0");
+	fprintf(stderr, "0", "0");
 	return (0);
 	}
 	else
 	{
-	fprintf(stderr, "-");
+	fprintf(stderr, "-", "-");
 	return (-1);
 	}
 }
