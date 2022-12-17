@@ -16,7 +16,7 @@ int print_sign(int n)
 	putchar(',');
 	putchar(' ');
 	putchar(n + '0');
-	putchar('\n')
+	putchar('\n');
 	return (1);
 	}
 	else if (n == 0)
