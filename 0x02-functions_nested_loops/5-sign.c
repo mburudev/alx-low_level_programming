@@ -13,7 +13,10 @@ int print_sign(int n)
 	if (n > 0)
 	{
 	fprintf(stderr, " ");
-	fprintf(stdout, "%c%d", '+', n);
+	putchar(',');
+	putchar(' ');
+	putchar(n + '0');
+	putchar('\n')
 	return (1);
 	}
 	else if (n == 0)
