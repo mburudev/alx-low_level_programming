@@ -10,23 +10,22 @@
 
 int print_sign(int n)
 {
+	int value;
+
 	if (n > 0)
 	{
-	fprintf(stderr, " ");
-	putchar(',');
-	putchar(' ');
-	putchar(n + '0');
-	putchar('\n');
-	return (1);
+	value = 1;
+	putchar('+');
 	}
 	else if (n == 0)
 	{
-	fprintf(stderr, "%c", '0');
-	return (0);
+	value = 0;
+	putchar('0');
 	}
 	else
 	{
-	fprintf(stderr, "%c", '-');
-	return (-1);
+	value = -1;
+	putchar('-');
 	}
+	return (value);
 }
