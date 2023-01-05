@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 	;
 	}
-	for (j = 0; src[j] < n && src[j] < (size_t src); j++)
+	for (j = 0; j < n; j++)
 	{
 	dest[i + j] = src[j];
 	}
