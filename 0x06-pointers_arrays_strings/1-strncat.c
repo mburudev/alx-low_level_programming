@@ -13,12 +13,13 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	size_t i, j;
+	int a = strlen(src);
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
 	;
 	}
-	for (j = 0; src[j] < n; j++)
+	for (j = 0; j < n && j < a; j++)
 	{
 	dest[i + j] = src[j];
 	}
