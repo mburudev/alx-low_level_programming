@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+
 /**
- * main - check description. 
+ * main - check description.
  * @argc: first parameter.
  * @argv: second parameter
  * Description: prints number of arguments
