@@ -11,23 +11,19 @@
 
 int main(int argc, char *argv[])
 {
-	int n;
-	int p;
-	int i;
+	int i, n;
 
 	n = 0;
 
 	for (i = 0; i < argc; i++)
 	{
-	p = atoi(argv[i]);
 	if (i > 0)
 	{
-	if (p == 0)
+	if (atoi(argv[i]) == 0)
 	{
 	return (printf("Error\n"), 1);
 	}
-	n = n + atoi(argv[i]);
-	return (n);
+	n += atoi(argv[i]);
 	}
 	}
 	printf("%d\n", n);
