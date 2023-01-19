@@ -14,14 +14,10 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
-	size_t n;
 
-	if (((char *)dest - (char *)src > n) || ((char *)src - (char *)dest > n))
-	{
 	for (i = 0; i < n; i++)
 	{
 	dest[i] = src[i];
-	}
 	}
 	return (dest);
 }
