@@ -2,8 +2,7 @@
 #include "main.h"
 
 /**
- * factorial(int n) - returns the factorial of any number.
- * factorial - gives the factorial of a positive integer.
+ * factorial - returns the factorial of any number.
  * @n: the given number
  * Return: the factorial of the number.
  */
