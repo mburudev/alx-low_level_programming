@@ -3,6 +3,7 @@
 
 /**
  * factorial(int n) - returns the factorial of any number.
+ * factorial - gives the factorial of a positive integer.
  * @n: the given number
  * Return: the factorial of the number.
  */
