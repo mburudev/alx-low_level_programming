@@ -9,6 +9,11 @@
 
 int is_prime_number(int n)
 {
+	int a = n % 2;
+	int b = n % 3;
+	int c = n % 5;
+	int d = n % 7;
+
 	if (n < 1)
 	{
 		return (0);
@@ -17,12 +22,6 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}
-
-	int a = n % 2;
-	int b = n % 3;
-	int c = n % 5;
-	int d = n % 7;
-
 	if (a == 0 && b == 0 && c == 0 && d == 0)
 	{
 		return (0);
