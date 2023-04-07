@@ -9,10 +9,10 @@
 
 int is_prime_number(int n)
 {
-	a = n % 2;
-	b = n % 3;
-	c = n % 5;
-	d = n % 7;
+	int a = n % 2;
+	int b = n % 3;
+	int c = n % 5;
+	int d = n % 7;
 
 	if (a != 0) && (b != 0) && (c != 0) && (d != 0)
 	{
