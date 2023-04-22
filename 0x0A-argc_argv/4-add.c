@@ -9,8 +9,17 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc = 1)
+	int i;
+	int sum;
+
+	if (argc != 2)
 	{
 	printf("0\n");
 	}
+
+	for (i = 0; i < argc; i++)
+	{
+		sum += atoi(argv[i]);
+	}
+	return (sum);
 }
