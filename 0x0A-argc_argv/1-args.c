@@ -11,12 +11,11 @@
 
 int main(int argc, char **argv)
 {
-	int sum;
+	int count;
 
-	for (sum = 0; sum < argc; sum++)
+	for (count = 0; count < argc; count++)
 	{
-	*argv[sum] = *argv[sum];
+		printf("%d\n", (count - 1));
 	}
-	printf("%d\n", (sum - 1));
 	return (0);
 }
