@@ -16,6 +16,6 @@ int main(int argc, char **argv)
 	{
 		*argv[count] = *argv[count];
 	}
-	printf("%d\n", count);
+	printf("%d\n", (count - 1));
 	return (0);
 }
