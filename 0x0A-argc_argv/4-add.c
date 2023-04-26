@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - entry point
@@ -9,9 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int sum;
-
 	if (argc == 1)
 	{
 	printf("0\n");
