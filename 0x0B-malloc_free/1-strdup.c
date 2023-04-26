@@ -8,7 +8,7 @@
  * Return: pointer to the duplicated string if success.
  */
 
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	if (str == NULL)
 	{
