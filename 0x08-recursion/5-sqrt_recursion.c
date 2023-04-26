@@ -17,16 +17,6 @@ int _sqrt_recursion(int n)
 	{
 		return (1);
 	}
-	int x;
 
-	x = _sqrt_recursion(n / 4) * 2;
-	
-	if (x * x <= n && (x + 1) * (x + 1) > n)
-	{
-		return (x);
-	}
-	else
-	{
-		return (-1);
-	}
+	return (_sqrt_recursion((n + 1) * (n + 1)));
 }
