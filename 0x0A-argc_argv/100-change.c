@@ -5,10 +5,8 @@
  * main - Calculates the minimum number of coins needed to make change
  * @argc: The number of command-line arguments
  * @argv: An array of strings containing the command-line arguments
- *
  * Return: 0 on success, 1 on error
  */
-
 int main(int argc, char *argv[])
 {
 	int cents, coins = 0;
@@ -19,7 +17,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cents = atoi(argv[1]);
-	
 	if (cents < 0)
 	{
 		printf("0\n");
