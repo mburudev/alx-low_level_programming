@@ -10,41 +10,47 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list all;
-	unsigned int i = 0, j = 0;
-	char *str;
-	char sep = '\0';
+    char c;
+    int i;
+    double d;
+    char *s;
+    const char *ptr;
+    va_list args;
+    va_start(args, format);
+    
+    ptr = format;
 
-	va_start(all, format);
+    while (*ptr != '\0') {
+        switch (*ptr) {
+            case 'c':
+                c = va_arg(args, int);
+                printf("%c", c);
+                break;
+            case 'i':
+                i = va_arg(args, int);
+                printf("%d", i);
+                break;
+            case 'f':
+                d = va_arg(args, double);
+                printf("%f", d);
+                break;
+            case 's':
+                s = va_arg(args, char *);
+                if (s == NULL) {
+                    printf("(nil)");
+                } else {
+                    printf("%s", s);
+                }
+                break;
+            default:
+                break;
+        }
+        ptr++;
+        if (*ptr != '\0') {
+            printf(", ");
+        }
+    }
 
-	while (format != NULL && format[i] != '\0')
-	{
-		switch (format[i])
-		{
-			case 'c':
-				printf("%c", va_arg(all, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(all, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(all, double));
-				break;
-			case 's':
-				str = va_arg(all, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s", str);
-				break;
-			default:
-				j++;
-				break;
-		}
-		if (format[i + 1] != '\0' && j == 0)
-			sep = ',';
-		i++;
-	}
-
-	printf("\n");
-	va_end(all);
+    va_end(args);
+    printf("\n");
 }
