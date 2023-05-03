@@ -11,20 +11,17 @@
 int is_palindrome(char *s)
 {
     int len = strlen(s);
-    char *p = s;
-    char *q = s + len - 1;
 
     if (len == 0 || len == 1) {
         return (1);
     }
 
-   while (p < q) {
-        if (*p != *q) {
-            return (0);
-        }
-        p++;
-        q--;
+    if (*s != *(s + len - 1)) {
+        return (0);
     }
 
-    return (1);
+    s++;
+    len -= 2;
+
+    return (is_palindrome(s));
 }
