@@ -10,17 +10,14 @@
 
 int is_palindrome(char *s)
 {
-	int len = strlen(s);
+	int len = 0, i;
 
-	if (len == 0 || len == 1)
+	while (s[len] != '\0')
+		len++;
+	for (i = 0; i < len / 2; i++)
 	{
-		return (1);
+		if (s[i] != s[len - i - 1])
+			return (0);
 	}
-	if (*s != *(s + len - 1))
-	{
-		return (0);
-	}
-	s++;
-	len -= 2;
-	return (is_palindrome(s));
+	return (1);
 }
