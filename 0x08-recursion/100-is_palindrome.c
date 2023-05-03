@@ -3,9 +3,9 @@
 #include <string.h>
 
 /**
- * is_palindrome - checks if a string is a palindrome.
+ * _strlen_recursion - returns the length of a string.
  * @s: pointer to the string.
- * Return: 1 if string is a palindrome and 0 if not.
+ * Return: returns the length of a string.
  */
 
 int _strlen_recursion(char *s)
@@ -19,7 +19,6 @@ int _strlen_recursion(char *s)
  * check_palindrome - checks if a string is a palindrome
  * @s: pointer to the string to check
  * @len: length of the string
- *
  * Return: 1 if the string is a palindrome, 0 otherwise
  */
 int check_palindrome(char *s, int len)
@@ -34,7 +33,6 @@ int check_palindrome(char *s, int len)
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: pointer to the string to check
- *
  * Return: 1 if the string is a palindrome, 0 otherwise
  */
 int is_palindrome(char *s)
