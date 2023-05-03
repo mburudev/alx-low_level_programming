@@ -8,7 +8,7 @@
  */
 int _isdigit(char c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }
 
 /**
@@ -18,39 +18,36 @@ int _isdigit(char c)
  */
 int _atoi(char *s)
 {
-    int sign = 1;
-    int num = 0;
-    int i;
+	int sign = 1;
+	int num = 0;
+	int i;
 
-    if (*s == '-')
-    {
-        sign = -1;
-        s++;
-    }
-
-    for (i = 0; s[i]; i++)
-    {
-        if (!_isdigit(s[i]))
-        {
-            printf("Error\n");
-            exit(98);
-        }
-
-        num = num * 10 + (s[i] - '0');
-    }
-
-    return sign * num;
+	if (*s == '-')
+	{
+		sign = -1;
+		s++;
+	}
+	for (i = 0; s[i]; i++)
+	{
+		if (!_isdigit(s[i]))
+		{
+			printf("Error\n");
+			exit(98);
+		}
+		num = num * 10 + (s[i] - '0');
+	}
+	return (sign * num);
 }
 
 /**
  * mul - multiplies two numbers
- * @a: the first number
- * @b: the second number
+ * @a: number 1
+ * @b: number 2
  * Return: the result of the multiplication
  */
 int mul(int a, int b)
 {
-    return a * b;
+	return (a * b);
 }
 
 /**
@@ -61,18 +58,15 @@ int mul(int a, int b)
  */
 int main(int argc, char **argv)
 {
-    int num1, num2;
+	int num1, num2;
 
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (98);
-    }
-
-    num1 = _atoi(argv[1]);
-    num2 = _atoi(argv[2]);
-
-    printf("%d\n", mul(num1, num2));
-
-    return (0);
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (98);
+	}
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	printf("%d\n", mul(num1, num2));
+	return (0);
 }
