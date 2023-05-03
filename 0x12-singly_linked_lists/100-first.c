@@ -6,7 +6,7 @@
 
 void __attribute__((constructor)) my_print(void);
 
-void my_print(void)
+void my_print()
 {
 	printf("You're beat! and yet, you must allow,\n"
 			"I bore my house upon my back!\n");
