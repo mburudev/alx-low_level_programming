@@ -5,38 +5,35 @@
 /**
  * print_listint_safe - Prints a listint_t linked list
  * @head: Pointer to the head of the list
- *
  * Return: The number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-    size_t count = 0;
-    const listint_t *slow = head, *fast = head;
+	const listint_t *tmp_n = NULL;
+	const listint_t *l_n = NULL;
+	size_t counter = 0;
+	size_t new_n;
 
-    while (slow != NULL && fast != NULL && fast->next != NULL)
-    {
-        printf("[%p] %d\n", (void *)slow, slow->n);
-        slow = slow->next;
-        fast = fast->next->next;
-        count++;
-
-        if (slow == fast)
-        {
-            printf("[%p] %d\n", (void *)slow, slow->n);
-            printf("-> [%p] %d\n", (void *)fast->next, fast->next->n);
-            printf("-> Loop detected, exit\n");
-            exit(98);
-        }
-    }
-
-    while (head != slow)
-    {
-        printf("[%p] %d\n", (void *)head, head->n);
-        head = head->next;
-        count++;
-    }
-
-    printf("[%p] %d\n", (void *)head, head->n);
-    return (count + 1);
+	tmp_n = head;
+	while (tmp_n)
+	{
+		printf("[%p] %d\n", (void *)tmp_n, tmp_n->n);
+		counter++;
+		tmp_n = tmp_n->next;
+		l_n = head;
+		new_n = 0;
+		while (new_n < counter)
+		{
+			if (tmp_n == l_n)
+			{
+				printf("-> [%p] %d\n", (void *)tmp_n, tmp_n->n);
+				return (counter);
+			}
+			l_n = l_n->next;
+			new_n++;
+		}
+		if (!head)
+			exit(98);
+	}
+	return (counter);
 }
-
