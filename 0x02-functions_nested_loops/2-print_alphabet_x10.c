@@ -2,22 +2,21 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - Check description
- * Description: It prints the alphabet 10 times.
+ * print_alphabet_x10 - it prints the alphabet 10 times.
  * Return: Nothing.
  */
 
 void print_alphabet_x10(void)
 {
-	char at, times;
+	char alphabet, times;
 
 	times = 0;
 
 	while (times < 10)
 	{
-	for (at = 'a'; at <= 'z'; at++)
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		putchar(at);
+		putchar(alphabet);
 	}
 	times++;
 	putchar('\n');
