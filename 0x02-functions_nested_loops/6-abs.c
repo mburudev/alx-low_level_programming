@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- *_abs - Check Description
+ *_abs - returns the absolute value of a number
  * @r: An integer input
- * Description: This function returns the absolute value of a number
  * Return: The absolute value of number r
  */
-
 int _abs(int r)
 {
 	if (r < 0)
