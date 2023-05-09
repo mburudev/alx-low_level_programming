@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -5,7 +6,6 @@
  * followed by a new line
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	long int i, j, k, next;
