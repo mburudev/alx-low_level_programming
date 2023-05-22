@@ -1,3 +1,5 @@
+#ifndef MAIN_H
+#define MAIN_H
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
@@ -11,3 +13,4 @@ void print_buffer(char *b, int size);
 char *leet(char *);
 char *rot13(char *);
 char _putchar(char c);
+#endif
