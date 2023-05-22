@@ -2,29 +2,21 @@
 #include "main.h"
 
 /**
- * _strcmp - check description.
- * Description: it compares two strings.
- * @s1: first input character.
- * @s2: second input character.
- * Return: difference in ASCII values.
+ * _strcmp - Compare two strings
+ * @s1: Pointer to the first string
+ * @s2: Pointer to the second string
+ *
+ * Return:
+ *   0 if the strings are equal
+ *   -ve value if the first differing character has a lower ASCII value in s1
+ *   +ve value if the first differing character has a greater ASCII value in s1
  */
-
 int _strcmp(char *s1, char *s2)
 {
-	int i, diff;
-
-	for (i = 0; s1[i] != '\0'; ++i)
+	while (*s1 != '\0' && *s1 == *s2)
 	{
-	if (s1[i] > s2[i])
-	{
-	diff = s1[i] - s2[i];
-	return (diff);
+		s1++;
+		s2++;
 	}
-	else if (s1[i] < s2[i])
-	{
-	diff = s1[i] - s2[i];
-	return (diff);
-	}
-	}
-	return (0);
+	return (*s1 - *s2);
 }
