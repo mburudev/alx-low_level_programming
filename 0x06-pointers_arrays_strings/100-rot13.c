@@ -16,6 +16,7 @@ char *rot13(char *str)
 	while (*ptr != '\0')
 	{
 		char *found = strchr(alpha, *ptr);
+
 		if (found != NULL)
 		{
 			i = found - alpha;
