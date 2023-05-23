@@ -1,9 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * rot13 - Encode a string using ROT13
  * @str: Pointer to the string
- *
  * Return: Pointer to the resulting string
  */
 char *rot13(char *str)
@@ -15,13 +15,14 @@ char *rot13(char *str)
 
 	while (*ptr != '\0')
 	{
-		i = strchr(alpha, *ptr) - alpha;
-		if (i >= 0)
+		char *found = strchr(alpha, *ptr);
+		if (found != NULL)
 		{
+			i = found - alpha;
 			*ptr = rot13[i];
 		}
 		ptr++;
 	}
 
-	return str;
+	return (str);
 }
