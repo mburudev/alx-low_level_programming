@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 
 /**
  * infinite_add - Adds two numbers
@@ -12,27 +11,24 @@
  *
  * Return: A pointer to the result, or 0 if the result cannot be stored in the buffer
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r) {
-  int i, j, carry = 0;
-  int len1 = strlen(n1);
-  int len2 = strlen(n2);
-
-  
-  if (len1 + len2 > size_r) {
-    return 0;
+void print_buffer(char *b, int size) {
+	int i, j;
+  if (size <= 0) {
+    printf("\n");
+    return;
   }
 
-  
-  for (i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0; i--, j--) {
-    int sum = (i >= 0 ? n1[i] - '0' : 0) + (j >= 0 ? n2[j] - '0' : 0) + carry;
-    r[i + j + 1] = sum % 10 + '0';
-    carry = sum / 10;
+  for (i = 0; i < size; i += 10) {
+    printf("%08x ", i);
+    for ( j = i; j < i + 10 && j < size; j++) {
+      printf("%02x ", b[j]);
+      if (isprint(b[j])) {
+        printf("%c", b[j]);
+      } else {
+        printf(".");
+      }
+    }
+    printf("\n");
   }
-
-  
-  if (carry) {
-    r[0] = carry + '0';
-  }
-
-  return r;
 }
+
