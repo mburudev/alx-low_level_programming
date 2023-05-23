@@ -25,8 +25,10 @@ void print_number(int n)
 		str[i] = n % 10 + '0';
 		n /= 10;
 	}
+	str[i] = '\0'; 
 	for (j = i - 1; j >= 0; j--)
 	{
 		putchar(str[j]);
 	}
 }
+
