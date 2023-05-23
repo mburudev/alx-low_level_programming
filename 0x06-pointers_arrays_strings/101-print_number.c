@@ -7,22 +7,26 @@
  */
 void print_number(int n)
 {
-	int divisor = 1;
-	int digit;
+	int i, j;
+	char str[10];
 
 	if (n < 0)
 	{
 		putchar('-');
 		n = -n;
 	}
-
-	while (n / divisor > 9)
-		divisor *= 10;
-
-	while (divisor != 0)
+	if (n == 0)
 	{
-		digit = (n / divisor) % 10;
-		putchar(digit + '0');
-		divisor /= 10;
+		putchar('0');
+		return;
+	}
+	for (i = 0; n > 0; i++)
+	{
+		str[i] = n % 10 + '0';
+		n /= 10;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		putchar(str[j]);
 	}
 }
