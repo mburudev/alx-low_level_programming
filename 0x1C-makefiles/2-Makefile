@@ -1,0 +1,20 @@
+# Variables
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(patsubst %.c, %.o, $(SRC))
+NAME = school
+
+# Default target
+all: $(NAME)
+
+# Rule to build the executable
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+# Rule to compile source files into object files
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+# Clean up
+clean:
+	rm -f $(OBJ) $(NAME)
